@@ -9,16 +9,38 @@
 #   generate-hashes: false
 
 -e file:.
-annotated-types==0.7.0
-    # via pydantic
-pydantic==2.7.2
-    # via py-script-template
-pydantic-core==2.18.3
-    # via pydantic
-tinydb==4.8.0
-    # via py-script-template
+contourpy==1.2.1
+    # via matplotlib
+cycler==0.12.1
+    # via matplotlib
+fonttools==4.53.0
+    # via matplotlib
+kiwisolver==1.4.5
+    # via matplotlib
+matplotlib==3.9.0
+    # via matplotlib-venn
+    # via venn
+    # via venn-diagram
+matplotlib-venn==0.11.10
+    # via venn-diagram
+numpy==2.0.0
+    # via contourpy
+    # via matplotlib
+    # via matplotlib-venn
+    # via scipy
+packaging==24.1
+    # via matplotlib
+pillow==10.3.0
+    # via matplotlib
+pyparsing==3.1.2
+    # via matplotlib
+python-dateutil==2.9.0.post0
+    # via matplotlib
+scipy==1.13.1
+    # via matplotlib-venn
+six==1.16.0
+    # via python-dateutil
 toml==0.10.2
-    # via py-script-template
-typing-extensions==4.12.0
-    # via pydantic
-    # via pydantic-core
+    # via venn-diagram
+venn==0.1.3
+    # via venn-diagram

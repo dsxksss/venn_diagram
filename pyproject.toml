@@ -1,9 +1,13 @@
 [project]
-name = "py-script-template"
+name = "venn_diagram"
 version = "0.1.0"
 description = "Add your description here"
 authors = [{ name = "VentCat", email = "2546650292@qq.com" }]
-dependencies = ["toml>=0.10.2"]
+dependencies = [
+    "toml>=0.10.2",
+    "matplotlib>=3.9.0",
+    "matplotlib-venn>=0.11.10",
+]
 readme = "README.md"
 requires-python = ">= 3.11"
 
@@ -15,7 +19,7 @@ build-backend = "hatchling.build"
 main = "py_script_template:main"
 
 [tool.rye.scripts]
-dev = "rye run main"
+dev = '''rye run main --input_files 'A.txt,B.txt' --labels 'SetA,SetB' --format 'all' --output_name 'intersection.txt' --img_name 'venn_diagram' --case_sensitive 'Yes' '''
 
 [tool.rye]
 managed = true

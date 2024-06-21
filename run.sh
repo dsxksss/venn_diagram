@@ -1,0 +1,2 @@
+# test 
+/data/PRG/tools/TCM/apps/venn_diagram/src/py_script_template/__main__.py  --input_files 'A.txt,B.txt' --labels 'SetA,SetB' --format 'all' --output_name 'intersection.txt' --img_name 'venn_diagram' --case_sensitive 'Yes'

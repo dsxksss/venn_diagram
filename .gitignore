@@ -12,3 +12,9 @@ wheels/
 # development
 *.log
 *cache.json
+
+*.jpg
+*.png
+state.json
+
+intersection.txt

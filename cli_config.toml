@@ -1,10 +1,10 @@
-# 使用例子，请根据实际情况修改
-
-description = "Target Prioritization Command Line Tool"
+description = "Venn Diagram Command Line Tool"
 [arguments]
-diseases = { required = true, help = "要查找的疾病/症状名称" }
-db_type = { choices = ["direct", "all"], help = "数据库类型(direct/all)" }
-cutoff = { default = 0.5, help = "截断值(0.0~1.0), 只保留截断值以上的数据, 默认0.5", type = "float" }
-target_class = { default = "all", help = "过滤靶点类型, 默认all" }
-db_dir = { help = "指定数据库目录" }
+labels = { default = "A,B", help = "要设置的label名称, 按顺序排列并以,号分割, 默认 A,B (注意!必须和提供的input_files数量一致)" }
+input_files = { required = true, help = "要比对的文件名称列表, 按顺序排列并以,号分割, (注意!必须和提供的labels数量一致)" }
+# style = { default = "[]", help = '要设置的区块样式(默认为[]则不设置样式, 按脚本默认), 按顺序排列并以,号分割, 语法格式如: [["A线条类型","A线宽","A线条颜色","A填充颜色","A不透明度"],["B线条类型","B线宽","B线条颜色","B填充颜色","B不透明度"]], 也可以指定设定名称来单独设置不同的样式, 例如:[{"fill_color":"red","line_width":"5","opacity":0.6},{"line_type":"solid","line_color":"blue"}]' }
+format = { default = "all", help = '导出数据类型, 默认all, 可选项:["all","jpg","png"]' }
+output_name = { default = "intersection.txt", help = "指定导出的交集数据文件名称, 默认intersection.txt" }
+img_name = { default = "venn_diagram", help = "指定导出的韦恩图图片文件名称(会根据format决定文件对应的后缀名), 默认如venn_diagram" }
+case_sensitive = { default = "Yes", help = "是否启用大小写敏感比对(Yes/No)大小写填写均可, 默认Yes" }
 save_dir = { default = "./", help = "指定导出的数据目录路径, 默认./" }
