@@ -81,10 +81,16 @@ def create_venn_diagram(args):
 
 def main() -> int:
     try:
+        # 获取当前脚本的文件路径
+        script_path = __file__
+
+        # 获取当前脚本所在的目录
+        script_dir = os.path.dirname(script_path)
+        
         set_progress_value(5)
         set_logging_default_config()
 
-        config_file = "cli_config.toml"
+        config_file = os.path.join(script_dir, "..", "..", "cli_config.toml")
         arguments = get_cli_argument(config_file)
         set_progress_value(45)
 
