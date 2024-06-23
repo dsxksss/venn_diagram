@@ -38,17 +38,18 @@ def read_file(file_path, case_sensitive):
 
 def create_venn_diagram(args):
     labels = args["labels"].split(",")
-    input_files = args["input_files"].split(",")
+    input_file1 = args["input_file1"]
+    input_file2 = args["input_file2"]
     output_name = args["output_name"]
     img_name = args["img_name"]
     format = args["format"]
     case_sensitive = args["case_sensitive"].lower() == "yes"
     save_dir = args["save_dir"]
 
-    if len(labels) != len(input_files):
+    if len(labels) != 2:
         raise ValueError("labels and input_files must have the same length")
 
-    data_sets = [read_file(file, case_sensitive) for file in input_files]
+    data_sets = [read_file(file, case_sensitive) for file in [input_file1, input_file2]]
 
     if len(data_sets) == 2:
         venn = venn2(data_sets, set_labels=labels)

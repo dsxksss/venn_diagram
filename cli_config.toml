@@ -1,7 +1,8 @@
 description = "Venn Diagram Command Line Tool"
 [arguments]
-labels = { default = "A,B", help = "要设置的label名称, 按顺序排列并以,号分割, 默认 A,B (注意!必须和提供的input_files数量一致)" }
-input_files = { required = true, help = "要比对的文件名称列表, 按顺序排列并以,号分割, (注意!必须和提供的labels数量一致)" }
+labels = { default = "A,B", help = "要设置的label名称, 按顺序排列并以,号分割, 默认 A,B" }
+input_file1 = { required = true, help = "要比对的文件1" }
+input_file2 = { required = true, help = "要比对的文件2" }
 # style = { default = "[]", help = '要设置的区块样式(默认为[]则不设置样式, 按脚本默认), 按顺序排列并以,号分割, 语法格式如: [["A线条类型","A线宽","A线条颜色","A填充颜色","A不透明度"],["B线条类型","B线宽","B线条颜色","B填充颜色","B不透明度"]], 也可以指定设定名称来单独设置不同的样式, 例如:[{"fill_color":"red","line_width":"5","opacity":0.6},{"line_type":"solid","line_color":"blue"}]' }
 format = { default = "all", help = '导出数据类型, 默认all, 可选项:["all","jpg","png"]' }
 output_name = { default = "intersection.txt", help = "指定导出的交集数据文件名称, 默认intersection.txt" }

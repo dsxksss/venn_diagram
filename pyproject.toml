@@ -19,7 +19,7 @@ build-backend = "hatchling.build"
 main = "py_script_template:main"
 
 [tool.rye.scripts]
-dev = '''rye run main --input_files 'A.txt,B.txt' --labels 'SetA,SetB' --format 'all' --output_name 'intersection.txt' --img_name 'venn_diagram' --case_sensitive 'Yes' '''
+dev = '''rye run main --input_file1 'A.txt' --input_file2 'B.txt' --labels 'SetA,SetB' --format 'all' --output_name 'intersection.txt' --img_name 'venn_diagram' --case_sensitive 'Yes' '''
 
 [tool.rye]
 managed = true
